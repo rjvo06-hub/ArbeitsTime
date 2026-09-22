@@ -1,8 +1,0 @@
-/* Evitar resaltado gris al pulsar en dispositivos táctiles */
-button, select, input {
-    -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    touch-action: manipulation;
-}
