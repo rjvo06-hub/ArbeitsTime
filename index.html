@@ -105,10 +105,25 @@
         <section id="view-clients" class="hidden space-y-4">
             <div class="bg-slate-800 border border-slate-700 rounded-2xl p-4 shadow">
                 <h2 class="text-lg font-bold mb-3 text-emerald-400">Nuevo Cliente</h2>
+                
+                <!-- Botón rápido para tomar foto al aviso de la casa -->
+                <div class="mb-3 bg-slate-900 border border-dashed border-slate-600 rounded-xl p-3 text-center">
+                    <label class="cursor-pointer flex flex-col items-center space-y-1">
+                        <span class="text-2xl">📸</span>
+                        <span class="text-xs text-emerald-400 font-semibold">Tomar foto al aviso de la casa</span>
+                        <span class="text-[10px] text-slate-400">Rellena la dirección automáticamente</span>
+                        <input type="file" id="client-photo-input" accept="image/*" capture="environment" class="hidden">
+                    </label>
+                    <div id="scan-status" class="text-xs mt-1 text-slate-400"></div>
+                </div>
+
                 <form id="form-client" class="space-y-3">
-                    <input type="text" id="client-company" placeholder="Nombre de la empresa o cliente" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
+                    <input type="text" id="client-company" placeholder="Nombre de la empresa / Cliente" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
+                    <input type="text" id="client-address" placeholder="Dirección (o usa la cámara arriba)" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
+                    <input type="text" id="client-contact" placeholder="Nombre de contacto" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
+                    <input type="tel" id="client-phone" placeholder="Teléfono" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
                     <input type="text" id="client-project" placeholder="Nombre del proyecto (opcional)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white">
-                    <button type="submit" class="w-full bg-emerald-600 active:bg-emerald-700 py-2.5 rounded-xl font-semibold text-sm">Guardar Cliente</button>
+                    <button type="submit" class="w-full bg-emerald-600 active:bg-emerald-700 py-2.5 rounded-xl font-semibold text-sm text-white">Guardar Cliente</button>
                 </form>
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-2xl p-4 shadow">
